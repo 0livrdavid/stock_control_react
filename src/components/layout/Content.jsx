@@ -49,7 +49,7 @@ function Content() {
     }
     
     return (
-      <ReactBootstrap.Container>
+      <ReactBootstrap.Container className='content'>
         {content}
       </ReactBootstrap.Container>
     );

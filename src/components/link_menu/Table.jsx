@@ -1,8 +1,23 @@
 import * as ReactBootstrap from 'react-bootstrap';
 
+import NavTable from './components_table/NavTable';
+import TableTable from './components_table/TableTable';
+import ItemTable from './components_table/ItemTable';
+
 function Table() {
       return (
         <ReactBootstrap.Container>
+            <NavTable>
+            </NavTable>
+            <TableTable>
+                <ItemTable></ItemTable>
+            </TableTable>
+
+
+
+
+
+
             <ul className="nav nav-tabs" id="myTab" role="tablist">
                 <li className="nav-item" role="presentation">
                     <a id="link_table_produtos" className="nav-link active" aria-current="page" href="#table_produtos" data-bs-target="#table_produtos" role="tab" aria-controls="home" aria-selected="true">Produtos</a>
