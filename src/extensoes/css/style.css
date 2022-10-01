@@ -1,0 +1,50 @@
+:root {
+    --bg-color: rgb(247 248 249);
+}  
+
+body {
+    margin: 0px !important;
+}
+
+
+body, html {
+    position: relative !important;
+    height: 100% !important;
+    min-width: 100% !important;
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
+    height: 100px;    
+    text-align: center;
+    line-height: 100px;
+    margin-top: 30px;
+    background-color: var(--bg-color)!important;
+}
+
+.container_block {
+    background-color: var(--bg-color);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.button_link {
+    border-style: none !important;
+    background: none !important;
+}
+
+.button_link_clicked {
+    font-weight: bold !important;
+    color: rgba(0,0,0,0.7) !important;
+}
+
+.icon {
+    margin-right: 8px;
+    vertical-align: baseline;
+}
+
+.icon_base_li {
+    margin-left: 10px;
+}
