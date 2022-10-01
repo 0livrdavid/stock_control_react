@@ -1,10 +1,12 @@
+import * as ReactBootstrap from 'react-bootstrap';
+
 import img_about_david from '../../extensoes/img/david_oliveira.png'
 import img_about_guilherme from '../../extensoes/img/guilherme_sene.png'
 import img_about_joao from '../../extensoes/img/joao_lucas.png'
 
 function About() {
       return (
-        <div className="container">
+        <ReactBootstrap.Container>
           <div className="row mt-4" style={{textAlign: 'center'}}>
             <h1>Development Team</h1>
           </div>
@@ -25,7 +27,7 @@ function About() {
               <span style={{textAlign: 'center'}}><h5>Development</h5></span>
             </div>
           </div>
-        </div>
+        </ReactBootstrap.Container>
       );
 }
 

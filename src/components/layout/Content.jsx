@@ -1,4 +1,5 @@
 import React from 'react';
+import * as ReactBootstrap from 'react-bootstrap';
 
 import '../../extensoes/css/layout.css';
 import '../../extensoes/css/style.css';
@@ -48,9 +49,9 @@ function Content() {
     }
     
     return (
-      <div className="content">
+      <ReactBootstrap.Container>
         {content}
-      </div>
+      </ReactBootstrap.Container>
     );
 }
 

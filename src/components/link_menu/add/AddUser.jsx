@@ -1,7 +1,9 @@
+import * as ReactBootstrap from 'react-bootstrap';
+
 function AddUser () {
     return (
-        <div>
-        <div className="container">
+        <>
+        <ReactBootstrap.Container>
           <form>
             <div className="row mt-2">
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-4">
@@ -33,16 +35,16 @@ function AddUser () {
               </div>
             </div>
           </form>
-        </div>
-        <div className="container">
+        </ReactBootstrap.Container>
+        <ReactBootstrap.Container>
           <div className="row justify-content-end mt-5">
             <div className="col-md-4 offset-md-3" style={{textAlign: 'right'}}>
               <a href="index.html" type="button" className="btn btn-outline-success" data-dismiss="modal">Save Changes</a>
               <a href="index.html" type="button" className="btn btn-outline-secondary" data-dismiss="modal">Close</a>
             </div>
           </div>
-        </div>
-      </div>
+        </ReactBootstrap.Container>
+      </>
     );
 }
 

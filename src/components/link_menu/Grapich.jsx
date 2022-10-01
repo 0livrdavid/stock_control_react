@@ -1,8 +1,10 @@
+import * as ReactBootstrap from 'react-bootstrap';
+
 function Grapich() {
       return (
-        <div className="container">
+        <ReactBootstrap.Container>
           TESTE
-        </div>
+        </ReactBootstrap.Container>
       );
 }
 
