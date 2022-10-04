@@ -3,7 +3,7 @@ import * as ReactBootstrap from 'react-bootstrap';
 
 import Context from '../../Context';
 
-function TableTable () {
+function SearchTable () {
     const { linkSelected, setLinkSelected } = useContext(Context);
     const { linkPessoas, setlinkPessoas } = useContext(Context);
 
@@ -13,4 +13,4 @@ function TableTable () {
     );
 }
 
-export default TableTable
+export default SearchTable

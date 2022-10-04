@@ -1,11 +1,11 @@
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 import * as ReactBootstrap from 'react-bootstrap';
 
 import Context from '../../Context';
 
 function NavTable() {
     const { linkSelected, setLinkSelected } = useContext(Context);
-    const [linkPessoas, setlinkPessoas] = useState('Pessoas');
+    const { linkPessoas, setlinkPessoas } = useContext(Context);
 
     const handleSelect = (eventKey) => {
         setLinkSelected(eventKey);
@@ -21,7 +21,7 @@ function NavTable() {
                     <ReactBootstrap.Nav.Link eventKey="Pedidos" title="Pedidos" onClick={linkPessoas === "Pessoas" ? undefined : () => setlinkPessoas("Pessoas")}>Pedidos</ReactBootstrap.Nav.Link>
                 </ReactBootstrap.Nav.Item>
                 <ReactBootstrap.Nav.Item>
-                    <ReactBootstrap.Nav.Link eventKey="Local" title="Local" onClick={linkPessoas === "Pessoas" ? undefined : () => setlinkPessoas("Pessoas")}>Local</ReactBootstrap.Nav.Link>
+                    <ReactBootstrap.Nav.Link eventKey="Locais" title="Local" onClick={linkPessoas === "Pessoas" ? undefined : () => setlinkPessoas("Pessoas")}>Locais</ReactBootstrap.Nav.Link>
                 </ReactBootstrap.Nav.Item>
                 <ReactBootstrap.Nav.Item>
                     <ReactBootstrap.Nav.Link eventKey="Depositos" title="Depositos" onClick={linkPessoas === "Pessoas" ? undefined : () => setlinkPessoas("Pessoas")}>Depositos</ReactBootstrap.Nav.Link>

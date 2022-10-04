@@ -5,6 +5,7 @@ import Context from '../../Context';
 
 function ItemTable () {
     const { linkSelected, setLinkSelected } = useContext(Context);
+    const { linkPessoas, setlinkPessoas } = useContext(Context);
 
     return (
         <>

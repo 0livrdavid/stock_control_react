@@ -4,16 +4,19 @@ import * as ReactBootstrap from 'react-bootstrap';
 import NavTable from './components_table/NavTable';
 import TableTable from './components_table/TableTable';
 import ItemTable from './components_table/ItemTable';
+import SearchTable from './components_table/SearchTable';
 
 import Context from '../Context';
 
 function Table() {
     const [linkSelected, setLinkSelected] = useState("Produtos");
+    const [linkPessoas, setlinkPessoas] = useState('Pessoas');
 
     return (
-        <Context.Provider value={{ linkSelected, setLinkSelected }}>
+        <Context.Provider value={{ linkSelected, setLinkSelected, linkPessoas, setlinkPessoas }}>
             <ReactBootstrap.Container>
                 <NavTable />
+                <SearchTable />
                 <TableTable>
                     <ItemTable></ItemTable>
                 </TableTable>
