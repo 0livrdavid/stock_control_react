@@ -25,7 +25,13 @@ function SearchTable () {
                         </ReactBootstrap.Col>
                         <ReactBootstrap.Col>
                             <ReactBootstrap.Form.Label>Category</ReactBootstrap.Form.Label>
-                            <ReactBootstrap.Form.Select>
+                            <ReactBootstrap.Form.Select onChange={(e) => setSearchForm(
+                                prevState => {
+                                let link_selected = Object.assign({}, prevState.searchForm);
+                                link_selected.name = e.target.name;
+                                link_selected.value = e.target.value;           
+                                return { link_selected }
+                            })}>
                                 <option>Fish</option>
                                 <option>Meal</option>
                                 <option>Fruit</option>
