@@ -1,0 +1,112 @@
+{
+    "Produtos": [
+        {
+            "id": 1,
+            "title": "Produtos",
+            "year": "1988"
+        },
+        {
+            "id": 2,
+            "title": "Ghostbusters",
+            "year": "1984"
+        }
+    ],
+    "Pedidos": [
+        {
+            "id": 1,
+            "title": "Pedidos",
+            "year": "1988"
+        },
+        {
+            "id": 2,
+            "title": "Ghostbusters",
+            "year": "1984"
+        }
+    ],
+    "Locais": [
+        {
+            "id": 1,
+            "title": "Locais",
+            "year": "1988"
+        },
+        {
+            "id": 2,
+            "title": "Ghostbusters",
+            "year": "1984"
+        }
+    ],
+    "Depositos": [
+        {
+            "id": 1,
+            "title": "Depositos",
+            "year": "1988"
+        },
+        {
+            "id": 2,
+            "title": "Ghostbusters",
+            "year": "1984"
+        }
+    ],
+    "Clientes": [
+        {
+            "id": 1,
+            "title": "Clientes",
+            "year": "1988"
+        },
+        {
+            "id": 2,
+            "title": "Ghostbusters",
+            "year": "1984"
+        }
+    ],
+    "Fornecedores": [
+        {
+            "id": 1,
+            "title": "Fornecedores",
+            "year": "1988"
+        },
+        {
+            "id": 2,
+            "title": "Ghostbusters",
+            "year": "1984"
+        }
+    ],
+    "Almoxarife": [
+        {
+            "id": 1,
+            "title": "Almoxarife",
+            "year": "1988"
+        },
+        {
+            "id": 2,
+            "title": "Ghostbusters",
+            "year": "1984"
+        }
+    ],
+    "Motorista": [
+        {
+            "id": 1,
+            "title": "Motorista",
+            "year": "1988"
+        },
+        {
+            "id": 2,
+            "title": "Ghostbusters",
+            "year": "1984"
+        }
+    ],
+    "Repositor": [
+        {
+            "id": 1,
+            "title": "Repositor",
+            "year": "1988"
+        },
+        {
+            "id": 2,
+            "title": "Ghostbusters",
+            "year": "1984"
+        }
+    ]
+}
+
+    

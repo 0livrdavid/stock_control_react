@@ -4,7 +4,9 @@ import * as ReactBootstrap from 'react-bootstrap';
 import Context from '../../Context';
 
 function SearchTable () {
-    const { linkSelected, setLinkSelected, linkPessoas, setlinkPessoas } = useContext(Context);
+    const { linkSelected, setLinkSelected, linkPessoas, setlinkPessoas, searchForm, setSearchForm } = useContext(Context);
+
+    console.log(searchForm);
 
     return (
         <>
@@ -12,12 +14,14 @@ function SearchTable () {
                 <ReactBootstrap.Form>
                     <ReactBootstrap.Row>
                         <ReactBootstrap.Col>
-                            <ReactBootstrap.Form.Label>ID</ReactBootstrap.Form.Label>
-                            <ReactBootstrap.Form.Control type="id" placeholder="ID"/>
-                        </ReactBootstrap.Col>
-                        <ReactBootstrap.Col>
                             <ReactBootstrap.Form.Label>Product</ReactBootstrap.Form.Label>
-                            <ReactBootstrap.Form.Control type="product" placeholder="Product" />
+                            <ReactBootstrap.Form.Control name="Product" type="text" placeholder="Product" onChange={(e) => setSearchForm(
+                                prevState => {
+                                let link_selected = Object.assign({}, prevState.searchForm);
+                                link_selected.name = e.target.name;
+                                link_selected.value = e.target.value;           
+                                return { link_selected }
+                            })}/>
                         </ReactBootstrap.Col>
                         <ReactBootstrap.Col>
                             <ReactBootstrap.Form.Label>Category</ReactBootstrap.Form.Label>
@@ -28,6 +32,10 @@ function SearchTable () {
                                 <option>Vegetables</option>
                                 <option>Pasta</option>
                             </ReactBootstrap.Form.Select>
+                        </ReactBootstrap.Col>
+                        <ReactBootstrap.Col>
+                            <ReactBootstrap.Form.Label>Manufacturing</ReactBootstrap.Form.Label>
+                            <ReactBootstrap.Form.Control type="date" placeholder="Manufacturing" />
                         </ReactBootstrap.Col>
                     </ReactBootstrap.Row>
                 </ReactBootstrap.Form>

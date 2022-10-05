@@ -13,6 +13,8 @@ function Table() {
     const [linkSelected, setLinkSelected] = useState("Produtos");
     const [linkPessoas, setlinkPessoas] = useState('Pessoas');
 
+    const [searchForm, setSearchForm] = useState([]);
+
     var data = JSON;
 
     switch (linkSelected) {
@@ -71,7 +73,7 @@ function Table() {
 	}, []);
   
     return (
-        <Context.Provider value={{ linkSelected, setLinkSelected, linkPessoas, setlinkPessoas }}>
+        <Context.Provider value={{ linkSelected, setLinkSelected, linkPessoas, setlinkPessoas, searchForm, setSearchForm }}>
             <ReactBootstrap.Container>
                 <NavTable />
                 <SearchTable />

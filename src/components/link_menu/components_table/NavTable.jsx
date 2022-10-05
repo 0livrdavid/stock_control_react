@@ -25,7 +25,7 @@ function NavTable() {
                 <ReactBootstrap.Nav.Item>
                     <ReactBootstrap.Nav.Link eventKey="Depositos" title="Depositos" onClick={linkPessoas === "Pessoas" ? undefined : () => setlinkPessoas("Pessoas")}>Depositos</ReactBootstrap.Nav.Link>
                 </ReactBootstrap.Nav.Item>
-                <ReactBootstrap.NavDropdown title={linkPessoas} id="nav-dropdown">
+                <ReactBootstrap.NavDropdown title={linkPessoas} id="nav-dropdown" >
                     <ReactBootstrap.NavDropdown.Item eventKey="Clientes" onClick={() => setlinkPessoas("Clientes")}>Clientes</ReactBootstrap.NavDropdown.Item>
                     <ReactBootstrap.NavDropdown.Item eventKey="Fornecedores" onClick={() => setlinkPessoas("Fornecedores")}>Fornecedores</ReactBootstrap.NavDropdown.Item>
                     <ReactBootstrap.NavDropdown.Divider />
