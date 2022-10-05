@@ -24,6 +24,7 @@
     "datatables.net-select-bs5": "^1.4.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
+    "react-data-table-component": "^7.5.3",
     "react-dom": "^18.2.0",
     "react-dropdown": "^1.11.0",
     "react-scripts": "5.0.1",

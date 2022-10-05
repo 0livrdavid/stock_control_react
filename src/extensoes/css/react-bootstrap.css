@@ -1,3 +1,7 @@
 .dropdown-item:active {
     background-color: #c5d0db !important;
 }
+
+.form-label {
+    margin-left: 10px;
+}

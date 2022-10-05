@@ -7,7 +7,6 @@ import Content from './layout/Content';
 import End from './layout/End';
 import Modal from './layout/Modal';
 
-
 function App() {
   var urlParams = new URLSearchParams(window.location.search);
   var url_link = urlParams.get('link');

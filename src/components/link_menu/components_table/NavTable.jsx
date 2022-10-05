@@ -4,8 +4,7 @@ import * as ReactBootstrap from 'react-bootstrap';
 import Context from '../../Context';
 
 function NavTable() {
-    const { linkSelected, setLinkSelected } = useContext(Context);
-    const { linkPessoas, setlinkPessoas } = useContext(Context);
+    const { linkSelected, setLinkSelected, linkPessoas, setlinkPessoas } = useContext(Context);
 
     const handleSelect = (eventKey) => {
         setLinkSelected(eventKey);

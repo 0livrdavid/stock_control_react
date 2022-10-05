@@ -1,25 +1,81 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import * as ReactBootstrap from 'react-bootstrap';
+import DataTable from 'react-data-table-component';
 
 import NavTable from './components_table/NavTable';
-import TableTable from './components_table/TableTable';
-import ItemTable from './components_table/ItemTable';
 import SearchTable from './components_table/SearchTable';
 
 import Context from '../Context';
+
+import JSON from './components_table/test'
 
 function Table() {
     const [linkSelected, setLinkSelected] = useState("Produtos");
     const [linkPessoas, setlinkPessoas] = useState('Pessoas');
 
+    var data = JSON;
+
+    switch (linkSelected) {
+        case "Produtos":
+            data = data.Produtos;
+            break;
+        case "Pedidos":
+            data = data.Pedidos;
+            break;
+        case "Locais":
+            data = data.Locais;
+            break;
+        case "Depositos":
+            data = data.Depositos;
+            break;
+        case "Clientes":
+            data = data.Clientes;
+            break;
+        case "Fornecedores":
+            data = data.Fornecedores;
+            break;  
+        case "Almoxarife":
+            data = data.Almoxarife;
+            break;
+        case "Motorista":
+            data = data.Motorista;
+            break;
+        case "Repositor":
+            data = data.Repositor;
+            break;    
+        default:
+            break;
+    }
+
+    const [columns, setColumns] = useState([]);
+	const [pending, setPending] = useState(true);
+
+	useEffect(() => {
+		const timeout = setTimeout(() => {
+			setColumns([
+				{
+					name: 'Title',
+					selector: row => row.title,
+					sortable: true,
+				},
+				{
+					name: 'Year',
+					selector: row => row.year,
+					sortable: true,
+				},
+			]);
+
+			setPending(false);
+		}, 2000);
+		return () => clearTimeout(timeout);
+	}, []);
+  
     return (
         <Context.Provider value={{ linkSelected, setLinkSelected, linkPessoas, setlinkPessoas }}>
             <ReactBootstrap.Container>
                 <NavTable />
                 <SearchTable />
-                <TableTable>
-                    <ItemTable></ItemTable>
-                </TableTable>
+                <DataTable title={linkSelected} columns={columns} data={data} progressPending={pending} pagination />
 
 
 
@@ -28,54 +84,9 @@ function Table() {
                 <br></br>
 
 
-                <ul className="nav nav-tabs" id="myTab" role="tablist">
-                    <li className="nav-item" role="presentation">
-                        <a id="link_table_produtos" className="nav-link active" aria-current="page" href="#table_produtos" data-bs-target="#table_produtos" role="tab" aria-controls="home" aria-selected="true">Produtos</a>
-                    </li>
-                    <li className="nav-item" role="presentation">
-                        <a id="link_table_pedidos" className="nav-link" href="#table_pedidos" data-bs-target="#table_produtos" role="tab" aria-controls="home" aria-selected="true">Pedidos</a>
-                    </li>
-                    <li className="nav-item" role="presentation">
-                        <a id="link_table_deposito" className="nav-link" href="#table_deposito" data-bs-target="#table_produtos" role="tab" aria-controls="home" aria-selected="true">Deposito</a>
-                    </li>
-                    <li className="nav-item" role="presentation">
-                        <a id="link_table_local" className="nav-link" href="#table_local" data-bs-target="#table_produtos" role="tab" aria-controls="home" aria-selected="true">Local</a>
-                    </li>
-                    <li className="nav-item" role="presentation">
-                        <a id="link_table_pessoas" className="nav-link" href="#table_pessoas" data-bs-target="#table_pessoas" role="tab" aria-controls="home" aria-selected="true">Pessoas</a>
-                    </li>
-                </ul>
                 <div className="tab-content" id="myTabContent">
                     <div id="table_produtos" className="tab-pane fade show active" role="tabpanel" aria-labelledby="link_table_produtos">
-                        teste 1
-                        <form>
-                            <div className="row mt-2">
-                                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-                                    <div className="form-group" style={{ textAlign: 'center' }}>
-                                        <label htmlFor="id">Id</label>
-                                        <input style={{ marginTop: '2%' }} type="number" min={0} className="form-control" id="id" placeholder="Find by Id..." />
-                                    </div>
-                                </div>
-                                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-                                    <div className="form-group" style={{ textAlign: 'center' }}>
-                                        <label htmlFor="products">Products</label>
-                                        <input style={{ marginTop: '2%' }} type="products" className="form-control" id="products" placeholder="Find Products..." />
-                                    </div>
-                                </div>
-                                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-                                    <div className="form-group" style={{ textAlign: 'center' }}>
-                                        <label htmlFor="formControlSelect">Category</label>
-                                        <select style={{ marginTop: '2%' }} className="form-control" id="formControlSelect">
-                                            <option>Fish</option>
-                                            <option>Meal</option>
-                                            <option>Fruit</option>
-                                            <option>Vegetables</option>
-                                            <option>Pasta</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
+                        
                         <div className="row mt-4 overflow-auto">
                             <div className="col-12">
                                 <table id="example" className="display table table-striped " style={{ width: '100%' }}>
