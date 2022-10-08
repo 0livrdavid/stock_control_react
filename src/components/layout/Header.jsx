@@ -10,7 +10,7 @@ import img_logo from '../../extensoes/img/logo_control_estoque.png'
 import Context from '../Context';
 
 function Header() {
-    const {link,setLink,sublink,setSublink} = useContext(Context);
+    const {link, setLink, setSublink} = useContext(Context);
 
     const navDropdownTitle = <span><i className={`bi icon bi-plus-circle${link === "link_add" ? "-fill" : ""}`} />Add</span>;
 

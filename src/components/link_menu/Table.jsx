@@ -19,31 +19,31 @@ function Table() {
 
     switch (linkSelected) {
         case "Produtos":
-            data = data.Produtos;
+            data = data["Produtos"];
             break;
         case "Pedidos":
-            data = data.Pedidos;
+            data = data["Pedidos"];
             break;
         case "Locais":
-            data = data.Locais;
+            data = data["Locais"];
             break;
         case "Depositos":
-            data = data.Depositos;
+            data = data["Depositos"];
             break;
         case "Clientes":
-            data = data.Clientes;
+            data = data["Clientes"];
             break;
         case "Fornecedores":
-            data = data.Fornecedores;
+            data = data["Fornecedores"];
             break;  
         case "Almoxarife":
-            data = data.Almoxarife;
+            data = data["Almoxarife"];
             break;
         case "Motorista":
-            data = data.Motorista;
+            data = data["Motorista"];
             break;
         case "Repositor":
-            data = data.Repositor;
+            data = data["Repositor"];
             break;    
         default:
             break;

@@ -14,7 +14,7 @@ import { useContext } from 'react';
 import Context from '../Context';
 
 function Content() {
-    const {link,sublink} = useContext(Context);
+    const {link, sublink} = useContext(Context);
   
     sublink == null ? window.history.replaceState("","","?link="+link): window.history.replaceState("","","?link="+link+"&sublink="+sublink);
     
