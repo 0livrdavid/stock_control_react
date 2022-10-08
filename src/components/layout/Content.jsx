@@ -15,42 +15,16 @@ import Context from '../Context';
 
 function Content() {
     const {link,sublink} = useContext(Context);
-    var content;
   
-    switch (link) {
-        case "link_home":
-            content = <Grapich/>;
-            break;
-        case "link_table":
-            content = <Table/>;
-            break;
-        case "link_add":
-            switch (sublink) {
-                case "product":
-                    content = <AddProduct/>;
-                    break;
-                case "user":
-                    content = <AddUser/>;
-                    break;
-                default:
-                    break;
-            }
-            break;
-        case "link_about":
-            content = <About/>;
-            break;
-        default:
-            break;
-    }
-    if (sublink == null) {
-        window.history.replaceState("","","?link="+link);
-    } else {
-        window.history.replaceState("","","?link="+link+"&sublink="+sublink);
-    }
+    sublink == null ? window.history.replaceState("","","?link="+link): window.history.replaceState("","","?link="+link+"&sublink="+sublink);
     
     return (
       <ReactBootstrap.Container className='content'>
-        {content}
+        {link === "link_home" && <Grapich/>}
+        {link === "link_table" && <Table/>} 
+        {sublink === "product" && <AddProduct/>} 
+        {sublink === "user" && <AddUser/>} 
+        {link === "link_about" && <About/>} 
       </ReactBootstrap.Container>
     );
 }
