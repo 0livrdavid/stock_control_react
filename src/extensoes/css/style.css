@@ -1,16 +1,5 @@
 :root {
     --bg-color: rgb(247 248 249);
-}  
-
-body {
-    margin: 0px !important;
-}
-
-
-body, html {
-    position: relative !important;
-    height: 100% !important;
-    min-width: 100% !important;
 }
 
 footer {
