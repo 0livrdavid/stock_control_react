@@ -1,16 +1,16 @@
 import { useContext } from 'react';
 import * as ReactBootstrap from 'react-bootstrap';
 
-import Context from '../../../Context';
+import Context from '../../../pages/Context';
 
-export default function AlmoxarifeSearch () {
+export default function DepositoSearch () {
     const { linkSelected, setLinkSelected, linkPessoas, setlinkPessoas, searchForm, setSearchForm } = useContext(Context);
 
     return (
         <ReactBootstrap.Form>
             <ReactBootstrap.Row>
                 <ReactBootstrap.Col>
-                    <ReactBootstrap.Form.Label>Almoxarife</ReactBootstrap.Form.Label>
+                    <ReactBootstrap.Form.Label>Deposito</ReactBootstrap.Form.Label>
                     <ReactBootstrap.Form.Control name="Product" type="text" placeholder="Product" onChange={(e) => setSearchForm(
                         prevState => {
                         let link_selected = Object.assign({}, prevState.searchForm);

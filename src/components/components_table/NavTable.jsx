@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import * as ReactBootstrap from 'react-bootstrap';
 
-import Context from '../../Context';
+import Context from '../../pages/Context';
 
 function NavTable() {
     const { linkSelected, setLinkSelected, linkPessoas, setlinkPessoas } = useContext(Context);

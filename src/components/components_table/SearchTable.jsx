@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import * as ReactBootstrap from 'react-bootstrap';
 
-import Context from '../../Context';
+import Context from '../../pages/Context';
 
 import ProdutoSearch from './component_search/ProdutoSearch';
 import PedidoSearch from './component_search/PedidoSearch';
@@ -13,7 +13,7 @@ import AlmoxarifeSearch from './component_search/AlmoxarifeSearch';
 import MotoristaSearch from './component_search/MotoristaSearch';
 import RepositorSearch from './component_search/RepositorSearch';
 
-function SearchTable () {
+export default function SearchTable () {
     const { linkSelected } = useContext(Context);
 
     return (
@@ -32,5 +32,3 @@ function SearchTable () {
         </>
     );
 }
-
-export default SearchTable

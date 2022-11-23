@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react';
 import * as ReactBootstrap from 'react-bootstrap';
 import DataTable from 'react-data-table-component';
 
-import NavTable from './components_table/NavTable';
-import SearchTable from './components_table/SearchTable';
+import NavTable from '../../components/components_table/NavTable';
+import SearchTable from '../../components/components_table/SearchTable';
 
 import Context from '../Context';
 
-import JSON from './components_table/test'
+import JSON from '../../components/components_table/test'
 
 function Table() {
     const [linkSelected, setLinkSelected] = useState("Produtos");
@@ -16,38 +16,7 @@ function Table() {
     const [searchForm, setSearchForm] = useState([]);
 
     var data = JSON;
-
-    switch (linkSelected) {
-        case "Produtos":
-            data = data["Produtos"];
-            break;
-        case "Pedidos":
-            data = data["Pedidos"];
-            break;
-        case "Locais":
-            data = data["Locais"];
-            break;
-        case "Depositos":
-            data = data["Depositos"];
-            break;
-        case "Clientes":
-            data = data["Clientes"];
-            break;
-        case "Fornecedores":
-            data = data["Fornecedores"];
-            break;  
-        case "Almoxarife":
-            data = data["Almoxarife"];
-            break;
-        case "Motorista":
-            data = data["Motorista"];
-            break;
-        case "Repositor":
-            data = data["Repositor"];
-            break;    
-        default:
-            break;
-    }
+    data = data[linkSelected];
 
     const [columns, setColumns] = useState([]);
 	const [pending, setPending] = useState(true);

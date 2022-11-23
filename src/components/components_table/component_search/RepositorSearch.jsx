@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import * as ReactBootstrap from 'react-bootstrap';
 
-import Context from '../../../Context';
+import Context from '../../../pages/Context';
 
 export default function RepositorSearch () {
     const { linkSelected, setLinkSelected, linkPessoas, setlinkPessoas, searchForm, setSearchForm } = useContext(Context);

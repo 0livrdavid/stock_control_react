@@ -1,16 +1,32 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import * as ReactBootstrap from 'react-bootstrap';
 
-import Context from '../../../Context';
+import Context from '../../../pages/Context';
 
-export default function DepositoSearch () {
-    const { linkSelected, setLinkSelected, linkPessoas, setlinkPessoas, searchForm, setSearchForm } = useContext(Context);
+
+export default function PedidoSearch () {
+    const { searchForm, setSearchForm } = useContext(Context);
+
+    useEffect(() => {
+        console.log(typeof searchForm);
+        console.log("primeiro: "+searchForm);
+
+        setSearchForm(
+            {
+                product:   "",
+                category: "",
+                manufacturing: ""
+            }
+        )
+    }, []);
+    console.log(typeof searchForm);
+    console.log(searchForm);
 
     return (
         <ReactBootstrap.Form>
             <ReactBootstrap.Row>
                 <ReactBootstrap.Col>
-                    <ReactBootstrap.Form.Label>Deposito</ReactBootstrap.Form.Label>
+                    <ReactBootstrap.Form.Label>Pedidos</ReactBootstrap.Form.Label>
                     <ReactBootstrap.Form.Control name="Product" type="text" placeholder="Product" onChange={(e) => setSearchForm(
                         prevState => {
                         let link_selected = Object.assign({}, prevState.searchForm);
