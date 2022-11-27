@@ -3,7 +3,6 @@ import * as ReactBootstrap from 'react-bootstrap';
 
 import Context from '../../../pages/Context';
 
-
 export default function PedidoSearch () {
     const { searchForm, setSearchForm } = useContext(Context);
 

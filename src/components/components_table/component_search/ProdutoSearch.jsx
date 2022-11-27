@@ -5,19 +5,42 @@ import Context from '../../../pages/Context';
 
 export default function ProdutoSearch () {
     const { searchForm, setSearchForm } = useContext(Context);
+    const { columns, setColumns } = useContext(Context);
 
     useEffect(() => {
         console.log(typeof searchForm);
         console.log("primeiro: "+searchForm);
 
-        setSearchForm(
+        setColumns([
             {
-                product:   "",
-                category: "All",
-                manufacturing: ""
-            }
-        )
-    }, []);
+                name: 'ID',
+                selector: row => row.id,
+                sortable: false,
+            },
+            {
+                name: 'Product',
+                selector: row => row.product,
+                sortable: true,
+            },
+            {
+                name: 'Category',
+                selector: row => row.category,
+                sortable: true,
+            },
+            {
+                name: 'Manufacturing',
+                selector: row => row.manufacturing,
+                sortable: true,
+            },
+        ]);
+
+        setSearchForm({
+            id: "",
+            product:   "",
+            category: "All",
+            manufacturing: ""
+        })
+    },[]);
     console.log(typeof searchForm);
     console.log(searchForm);
 
